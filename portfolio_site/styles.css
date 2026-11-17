@@ -1,0 +1,146 @@
+/* Shared styles for all four pages. */
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 25px;
+  background-color: #e7e7e7; /* Light silver */
+  color: #292929; /* Deep charcoal */
+  font-family: Georgia, serif;
+  line-height: 1.65;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #8b3f1b; /* Dark burnt orange */
+  font-family: "Arial Black", sans-serif;
+  line-height: 1.25;
+}
+
+h1 {
+  margin: 0 0 14px;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 1.55rem;
+}
+
+h3 {
+  margin-top: 0;
+  font-size: 1.15rem;
+}
+
+a {
+  color: #882d25; /* Dark brick red */
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: #c45b20; /* Burnt orange */
+}
+
+a:focus-visible {
+  outline: 2px solid #c45b20;
+  outline-offset: 4px;
+}
+
+.site-header,
+main,
+.site-footer {
+  max-width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.site-header {
+  padding: 30px 35px 22px;
+  background-color: #f6f4f1;
+  border-top: 5px solid #8b3f1b;
+  border-radius: 12px 12px 0 0;
+}
+
+.site-header p {
+  max-width: 65ch;
+  margin: 0 0 24px;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 26px;
+  padding-top: 17px;
+  border-top: 1px solid #d2c9c1;
+}
+
+.site-nav a {
+  font-weight: bold;
+}
+
+main {
+  padding: 34px 35px 44px;
+  background-color: #fffefd;
+}
+
+.intro {
+  max-width: 75ch;
+  margin-bottom: 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.panel {
+  padding: 22px 24px;
+  background-color: #f7f3f0;
+  border: 1px solid #e6ded7;
+  border-radius: 9px;
+}
+
+.panel p:last-child,
+.panel ul:last-child {
+  margin-bottom: 0;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+.site-footer {
+  padding: 20px 35px;
+  background-color: #f6f4f1;
+  border-top: 1px solid #d2c9c1;
+  border-radius: 0 0 12px 12px;
+  font-size: 0.9rem;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .site-header,
+  main,
+  .site-footer {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
